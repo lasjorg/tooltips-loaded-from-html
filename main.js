@@ -1,7 +1,7 @@
-$('.hover').on('mouseover', addHTML);
-$('.hover').on('mouseleave', removeHTML);
+$('.hover').on('mouseover', addTooltip);
+$('.hover').on('mouseleave', removeTooltip);
 
-function addHTML() {
+function addTooltip() {
   if ($('.tooltip').length > 0) return;
 
   const hoverTarget = this;
@@ -12,6 +12,6 @@ function addHTML() {
   });
 }
 
-function removeHTML() {
+function removeTooltip() {
   this.firstElementChild.remove();
 }
