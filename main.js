@@ -1,5 +1,4 @@
 $('.hover').on('mouseover', addTooltip);
-$('.hover').on('mouseleave', removeTooltip);
 
 function addTooltip() {
   if ($('.tooltip').length > 0) return;
@@ -9,9 +8,10 @@ function addTooltip() {
 
   $.get('tooltips.html').then((html) => {
     $(html).find(`#tooltip-${hoverTargetId}`).appendTo(hoverTarget);
+    $('.btn-wrapper').on('click', removeTooltipOnClick);
   });
 }
 
-function removeTooltip() {
-  this.firstElementChild.remove();
+function removeTooltipOnClick() {
+  this.parentElement && this.parentElement.remove();
 }

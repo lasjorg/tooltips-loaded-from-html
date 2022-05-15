@@ -11,9 +11,39 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0 0 0 1rem;
+  margin: 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  max-width: 400px;
+  height: 240px;
+  margin: 0 auto;
+  display: block;
+  overflow-x: auto;
+  border-spacing: 0;
+}
+
+a {
+  color: green;
+}
+
 .container {
   width: min(980px, 85%);
   margin-inline: auto;
+  margin-top: 2rem;
 }
 
 span {
@@ -24,14 +54,32 @@ span {
 }
 
 .tooltip {
+  display: grid;
   position: absolute;
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
   min-height: 50px;
   width: max-content;
-  padding: 1rem;
-  color: #1b2b34;
-  background: rgba(20, 230, 80, 0.8);
+  color: #ebebeb;
+  background: #313146;
   z-index: 10;
+}
+
+.tooltip-content {
+  padding: 1rem 2rem;
+}
+
+.btn-wrapper {
+  display: flex;
+  width: max-content;
+  margin: 4px 4px 0 auto;
+  color: #ebebeb;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-wrapper:hover {
+  color: #fafafa;
 }
